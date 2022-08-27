@@ -53,5 +53,6 @@ export async function getStaticProps({ params }: StaticProps) {
         content: await serialize(content),
         data: data,
     }
+    console.log(article)
     return { props: { article } }
 }
