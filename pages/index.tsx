@@ -14,7 +14,7 @@ type Props = {
     articles: Article[],
 }
 
-const Home: NextPage = ({ articles }: PropsT) => {
+const Home: NextPage = ({ articles }: Props) => {
     return (
         <>
             <p>工事中</p>
