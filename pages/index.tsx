@@ -43,7 +43,7 @@ export default async function getStaticProps() {
         })
     )
     return {
-        Props: {
+        props: {
             articles: articles,
         },
     }
