@@ -21,7 +21,7 @@ export default async function Content({ content, meta }: Props) {
     )
 }
 
-export async fucntion getStaticPaths() {
+export async function getStaticPaths() {
     let files = fs.readdirSync(path.join("pages/articles"))
     files = files.filter((file) => file.split(".")[1] === "mdx");
     const paths = files.map(file => {
