@@ -6,8 +6,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-type Article = {
+type Meta = {
     title: string,
+}
+
+type Article = {
+    url: string,
+    meta: Meta,
 }
 
 type Props = {
