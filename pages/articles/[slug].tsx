@@ -26,7 +26,7 @@ export async fucntion getStaticPaths() {
     files = files.filter((file) => file.split(".")[1] === "mdx");
     const paths = files.map(file => {
         return {
-            params: { id: file.replace(".mdx", "") }
+            params: { slug: file.replace(".mdx", "") }
         }
     })
     return {
@@ -35,9 +35,9 @@ export async fucntion getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params: { id } }: Param) {
+export async function getStaticProps({ params: { slug } }: Param) {
     const article = await Promise.all(
-        const filedata = fs.readFileSync(path.join("pages/articles/", `${id}.mdx`))
+        const filedata = fs.readFileSync(path.join("pages/articles/", `${slug}.mdx`))
         const { data, content } = matter(filedata)
         return {
             content: await serialize(content),
