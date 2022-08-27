@@ -1,12 +1,25 @@
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 
 type Param = {
-    id: string;
+    id: string,
 }
 
-export default async function Content({  }) {}
+type Meta = {
+    title: string,
+}
+
+type Props = {
+    content: MDXRemoteSerializeResult,
+    meta: Meta,
+}
+
+export default async function Content({ content, meta }: Props) {
+    return (
+        <MDXRemote {...content}/>
+    )
+}
 
 export async fucntion getStaticPaths() {
     let files = fs.readdirSync(path.join("pages/articles"))
@@ -27,7 +40,7 @@ export async function getStaticProps({ params: { id } }: Param) {
         const filedata = fs.readFileSync(path.join("pages/articles/", `${id}.mdx`))
         const { data, content } = matter(filedata)
         return {
-            content: content,
+            content: await serialize(content),
             data: data,
         }
     )
