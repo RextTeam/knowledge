@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Head />
           <body>
               <Nav />
-              <main>
+              <main className="px-7">
                   <Component {...pageProps} />
               </main>
           </body>
