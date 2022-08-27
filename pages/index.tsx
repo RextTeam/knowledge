@@ -10,7 +10,7 @@ interface Article {
     title: string;
 }
 
-const Home: NextPage = ({ articles: Article[] }) => {
+const Home: NextPage = ({ articles: Article[], }) => {
     return (
         <>
             <p>工事中</p>
