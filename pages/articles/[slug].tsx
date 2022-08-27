@@ -1,5 +1,6 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import fs from 'fs'
 
 
 type Param = {
