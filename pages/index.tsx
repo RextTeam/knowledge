@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import Link from 'next/link'
 
 type Meta = {
     title: string,
@@ -25,7 +26,7 @@ export default function Home({ articles }: Props) {
             <p>工事中</p>
             <div>
                 {articles.map(article => (
-                    <a href={article.url} key={article.url}>{article.meta.title}</a>
+                    <Link href={`/articles/${article.url}`} key={article.url}>{article.meta.title}</Link>
                 ))}
             </div>
         </>
@@ -41,7 +42,7 @@ export async function getStaticProps() {
             const { data } = matter(filedata)
             return {
                 meta: data,
-                url: file,
+                url: file.replace(".mdx", ""),
             }
         })
     )
