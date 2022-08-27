@@ -29,7 +29,7 @@ const Home: NextPage = ({ articles }: Props) => {
 
 export default Home
 
-export default async function getStaticProps() {
+export async function getStaticProps() {
     let files = fs.readdirSync(path.join("pages/articles"))
     files = files.filter((file) => file.split(".")[1] === "mdx");
     const articles = await Promiss.all(
