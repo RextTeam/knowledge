@@ -3,7 +3,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Meta from '../../interfaces/meta'
+import { Meta } from '../../interfaces/meta'
 
 
 type Param = {
