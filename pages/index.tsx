@@ -14,12 +14,12 @@ type Props = {
     articles: Article[],
 }
 
-const Home: NextPage = ({ articles }: Props) => {
+const Home: NextPage = (props) => {
     return (
         <>
             <p>工事中</p>
             <div>
-                {articles.map(article => (
+                {props.articles.map(article => (
                     <a href={article.url} key={article.url}>{article.meta.title}</a>
                 ))}
             </div>
