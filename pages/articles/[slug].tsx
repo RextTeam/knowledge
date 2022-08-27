@@ -3,6 +3,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import Meta from '../../interfaces/meta'
 
 
 type Param = {
@@ -11,10 +12,6 @@ type Param = {
 
 type StaticProps = {
     params: Param,
-}
-
-type Meta = {
-    title: string,
 }
 
 type Article = {
@@ -30,7 +27,7 @@ export default function Content({ article }: Props) {
     console.log(article)
     return (
         <div>
-            <h2>{article.meta.title}</h2>
+            <h2 className="text-center pt-8">{article.meta.title}</h2>
             <MDXRemote {...article.content}/>
         </div>
     )
