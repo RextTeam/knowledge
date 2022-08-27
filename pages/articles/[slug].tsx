@@ -8,6 +8,10 @@ type Param = {
     id: string,
 }
 
+type StaticProps = {
+    params: Param,
+}
+
 type Meta = {
     title: string,
 }
@@ -37,7 +41,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params: { slug } }: Param) {
+export async function getStaticProps({ params: { slug } }: StaticProps) {
     const filedata = fs.readFileSync(path.join("pages/articles/", `${slug}.mdx`))
     const { data, content } = matter(filedata)
     const article = {
