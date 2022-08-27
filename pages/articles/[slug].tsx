@@ -26,11 +26,11 @@ type Props = {
 export default function Content({ article }: Props) {
     console.log(article)
     return (
-        <div className="px-7">
+        <div>
             <h2 className="text-center pt-10 text-5xl">{article.meta.title}</h2>
-            <div className="prose">
+            <article className="prose">
                 <MDXRemote {...article.content}/>
-            </div>
+            </article>
         </div>
     )
 }
