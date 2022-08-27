@@ -6,12 +6,12 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-interface Article {
-    title: string;
+type Article {
+    title: string,
 }
 
-interface PropsT {
-    articles: Article[];
+type Props {
+    articles: Article[],
 }
 
 const Home: NextPage = ({ articles }: PropsT) => {
