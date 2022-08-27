@@ -27,9 +27,11 @@ type Props = {
 }
 
 export default async function Content({ article }: Props) {
-    console.log(article)
     return (
-        <MDXRemote {...article.content}/>
+        <div>
+            <h2>{article.title}</h2>
+            <MDXRemote {...article.content}/>
+        </div>
     )
 }
 
