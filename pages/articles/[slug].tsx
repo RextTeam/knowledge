@@ -26,7 +26,7 @@ type Props = {
     article: Article,
 }
 
-export default async function Content({ article }: Props) {
+export default function Content({ article }: Props) {
     console.log(article)
     return (
         <div>
