@@ -26,7 +26,7 @@ type Props = {
 export default function Content({ article }: Props) {
     console.log(article)
     return (
-        <div>
+        <div className="px-4">
             <h2 className="text-center pt-10 text-5xl">{article.meta.title}</h2>
             <MDXRemote {...article.content}/>
         </div>
