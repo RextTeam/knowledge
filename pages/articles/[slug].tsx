@@ -42,8 +42,8 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params: { slug } }: StaticProps) {
-    const filedata = fs.readFileSync(path.join("articles/", `${slug}.mdx`))
+export async function getStaticProps({ params }: StaticProps) {
+    const filedata = fs.readFileSync(path.join("articles/", `${params.slug}.mdx`))
     const { data, content } = matter(filedata)
     const article = {
         content: await serialize(content),
