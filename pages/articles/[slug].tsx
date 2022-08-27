@@ -28,7 +28,7 @@ type Props = {
 
 export default async function Content({ article }: Props) {
     return (
-        <MDXRemote {...content}/>
+        <MDXRemote {...article.content}/>
     )
 }
 
