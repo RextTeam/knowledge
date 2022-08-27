@@ -99,11 +99,6 @@
   dependencies:
     glob "7.1.7"
 
-"@next/mdx@^12.2.5":
-  version "12.2.5"
-  resolved "https://registry.npmjs.org/@next/mdx/-/mdx-12.2.5.tgz"
-  integrity sha512-b4gDNNvlt1Icf9D+nMzc66Tn1ei4lYRUFjwjWdCgdQFCo2ahKl+/f4R/g958KGzZMFmmXBJ7JIfzeAqgPv7TsA==
-
 "@next/swc-android-arm-eabi@12.2.5":
   version "12.2.5"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-12.2.5.tgz#903a5479ab4c2705d9c08d080907475f7bacf94d"
