@@ -10,6 +10,7 @@ export default function Nav() {
                 </div>
                 <div>
                     <a className="text-3xl" href="https://rt.rext.dev">Website</a>
+                    <a className="text-3xl" href="https://docs.rt.rext.dev">Docs</a>
                 </div>
             </div>
         </div>
