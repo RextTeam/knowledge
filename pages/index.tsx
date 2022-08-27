@@ -14,7 +14,7 @@ interface PropsT {
     articles: Article;
 }
 
-const Home: NextPage = ({ articles }: PropsT) => {
+const Home: NextPage = ({ articles }) => {
     return (
         <>
             <p>工事中</p>
