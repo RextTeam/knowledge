@@ -17,12 +17,16 @@ type Meta = {
     title: string,
 }
 
-type Props = {
+type Article = {
     content: MDXRemoteSerializeResult,
     meta: Meta,
 }
 
-export default async function Content({ content, meta }: Props) {
+type Props = {
+    article: Article,
+}
+
+export default async function Content({ article }: Props) {
     return (
         <MDXRemote {...content}/>
     )
