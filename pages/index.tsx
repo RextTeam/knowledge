@@ -12,7 +12,7 @@ const Home: NextPage = (articles) => {
             <p>工事中</p>
             <div>
                 {articles.map(article => (
-                    <a href={article.url}>{article.meta.title}</a>
+                    <a href={article.url} key={article.url}>{article.meta.title}</a>
                 ))}
             </div>
         </>
