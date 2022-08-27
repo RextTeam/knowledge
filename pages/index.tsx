@@ -44,7 +44,7 @@ export default async function getStaticProps() {
     )
     return {
         Props: {
-            articles,
+            articles: articles,
         },
     }
 }
