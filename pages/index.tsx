@@ -14,7 +14,7 @@ type Props = {
     articles: Article[],
 }
 
-const Home: NextPage = (props) => {
+export default function Home({ articles }: Props) {
     return (
         <>
             <p>工事中</p>
@@ -26,8 +26,6 @@ const Home: NextPage = (props) => {
         </>
     )
 }
-
-export default Home
 
 export async function getStaticProps() {
     let files = fs.readdirSync(path.join("pages/articles"))
