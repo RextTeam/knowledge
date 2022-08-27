@@ -19,7 +19,7 @@ export default function Home({ articles }: Props) {
         <>
             <p>工事中</p>
             <div>
-                {props.articles.map(article => (
+                {articles.map(article => (
                     <a href={article.url} key={article.url}>{article.meta.title}</a>
                 ))}
             </div>
