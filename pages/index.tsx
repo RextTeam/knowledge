@@ -6,8 +6,17 @@ import fs, { Promiss } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const Home: NextPage = () => {
-    return <p>工事中</p>
+const Home: NextPage = (articles) => {
+    return (
+        <>
+            <p>工事中</p>
+            <div>
+                {articles.map(article => (
+                    <a href={article.url}>{article.meta.title}</a>
+                ))}
+            </div>
+        </>
+    )
 }
 
 export default Home
