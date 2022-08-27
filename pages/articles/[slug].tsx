@@ -36,13 +36,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: Param) {
-    const article = await Promise.all(
-        const filedata = fs.readFileSync(path.join("pages/articles/", `${slug}.mdx`))
-        const { data, content } = matter(filedata)
-        return {
-            content: await serialize(content),
-            data: data,
-        }
-    )
+    const filedata = fs.readFileSync(path.join("pages/articles/", `${slug}.mdx`))
+    const { data, content } = matter(filedata)
+    const article = {
+        content: await serialize(content),
+        data: data,
+    }
     return { props: { article } }
 }
