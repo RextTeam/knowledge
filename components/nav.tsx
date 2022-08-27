@@ -23,6 +23,7 @@ export default function Nav() {
                         <li className="mx-4" key={item.name}>
                             <a className="text-3xl" href={item.url} key={item.name}>{item.name}</a>
                         </li>
+                    )}
                 </ul>
             </div>
         </div>
