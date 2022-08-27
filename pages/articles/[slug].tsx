@@ -27,6 +27,7 @@ type Props = {
 }
 
 export default async function Content({ article }: Props) {
+    console.log(article)
     return (
         <div>
             <h2>{article.meta.title}</h2>
