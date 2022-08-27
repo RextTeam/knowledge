@@ -21,12 +21,17 @@ type Props = {
 export default function Home({ articles }: Props) {
     return (
         <>
-            <p>工事中</p>
-            <div>
+            <h2 className="text-5xl">記事一覧</h2>
+            <li>
                 {articles.map(article => (
-                    <Link href={`/articles/${article.url}`} key={article.url}>{article.meta.title}</Link>
+                    <ul key={article.url}>
+                        <Link href={`/articles/${article.url}`}>
+                            <a className="text-3xl">{article.title}</a>
+                        </Link>
+                        <p className="text-xl">{article.description}</p>
+                    </ul>
                 ))}
-            </div>
+            </li>
         </>
     )
 }
