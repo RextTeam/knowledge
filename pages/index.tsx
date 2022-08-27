@@ -33,11 +33,11 @@ export default function Home({ articles }: Props) {
 }
 
 export async function getStaticProps() {
-    let files = fs.readdirSync(path.join("pages/articles"))
+    let files = fs.readdirSync(path.join("articles"))
     files = files.filter((file) => file.split(".")[1] === "mdx");
     const articles = await Promise.all(
         files.map(file => {
-            const filedata = fs.readFileSync(path.join("pages/articles/", file))
+            const filedata = fs.readFileSync(path.join("articles/", file))
             const { data } = matter(filedata)
             return {
                 meta: data,
