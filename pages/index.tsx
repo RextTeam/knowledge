@@ -21,8 +21,8 @@ type Props = {
 export default function Home({ articles }: Props) {
     return (
         <>
-            <h2 className="text-5xl">記事一覧</h2>
-            <li>
+            <h2 className="text-4xl">記事一覧</h2>
+            <li className="pt-4">
                 {articles.map(article => (
                     <ul key={article.url} className="border rounded">
                         <Link href={`/articles/${article.url}`}>
