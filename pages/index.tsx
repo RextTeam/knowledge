@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import fs, { Promiss } from 'fs'
+import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
