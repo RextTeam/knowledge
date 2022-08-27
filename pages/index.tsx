@@ -10,7 +10,11 @@ interface Article {
     title: string;
 }
 
-const Home: NextPage = ({ articles: Article[], }) => {
+interface PropsT {
+    articles: Article;
+}
+
+const Home: NextPage = ({ articles }: PropsT) => {
     return (
         <>
             <p>工事中</p>
