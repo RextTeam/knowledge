@@ -37,7 +37,7 @@ export async function getStaticProps() {
     files = files.filter((file) => file.split(".")[1] === "mdx");
     const articles = await Promise.all(
         files.map(file => {
-            const filedata = fs.readFileSync(path.json("pages/articles/", file))
+            const filedata = fs.readFileSync(path.join("pages/articles/", file))
             const { data } = matter(filedata)
             return {
                 meta: data,
