@@ -35,7 +35,7 @@ export default function Home({ articles }: Props) {
 export async function getStaticProps() {
     let files = fs.readdirSync(path.join("pages/articles"))
     files = files.filter((file) => file.split(".")[1] === "mdx");
-    const articles = await Promiss.all(
+    const articles = await Promise.all(
         files.map(file => {
             const filedata = fs.readFileSync(path.json("pages/articles/", file))
             const { data } = matter(filedata)
