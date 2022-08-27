@@ -6,10 +6,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import Meta from '../interfaces/meta'
 
-type Meta = {
-    title: string,
-}
 
 type Article = {
     url: string,
