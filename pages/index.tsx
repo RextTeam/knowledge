@@ -6,7 +6,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const Home: NextPage = (articles) => {
+interface Article {
+    title: string;
+}
+
+const Home: NextPage = (articles: Article[]) => {
     return (
         <>
             <p>工事中</p>
