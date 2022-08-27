@@ -26,9 +26,9 @@ export default function Home({ articles }: Props) {
                 {articles.map(article => (
                     <ul key={article.url}>
                         <Link href={`/articles/${article.url}`}>
-                            <a className="text-3xl">{article.title}</a>
+                            <a className="text-3xl">{article.meta.title}</a>
                         </Link>
-                        <p className="text-xl">{article.description}</p>
+                        <p className="text-xl">{article.meta.description}</p>
                     </ul>
                 ))}
             </li>
