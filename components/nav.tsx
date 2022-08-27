@@ -19,7 +19,7 @@ export default function Nav() {
                     <Link href="/"><a><h1 className="text-4xl">Knowledge</h1></a></Link>
                 </div>
                 <div>
-                    {Items.map(link => <a className="text-3xl mx-4" href={item.url} key={item.name}>{item.name}</a>}
+                    {Items.map(item => <a className="text-3xl mx-4" href={item.url} key={item.name}>{item.name}</a>}
                 </div>
             </div>
         </div>
