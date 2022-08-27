@@ -28,7 +28,9 @@ export default function Content({ article }: Props) {
     return (
         <div className="px-7">
             <h2 className="text-center pt-10 text-5xl">{article.meta.title}</h2>
-            <MDXRemote {...article.content}/>
+            <div className="prose">
+                <MDXRemote {...article.content}/>
+            </div>
         </div>
     )
 }
