@@ -27,6 +27,7 @@ type Props = {
 }
 
 export default async function Content({ article }: Props) {
+    console.log(article)
     return (
         <MDXRemote {...article.content}/>
     )
@@ -53,6 +54,5 @@ export async function getStaticProps({ params }: StaticProps) {
         content: await serialize(content),
         data: data,
     }
-    console.log(article)
     return { props: { article } }
 }
