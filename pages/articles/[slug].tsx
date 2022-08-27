@@ -54,7 +54,7 @@ export async function getStaticProps({ params }: StaticProps) {
     const { data, content } = matter(filedata)
     const article = {
         content: await serialize(content),
-        data: data,
+        meta: data,
     }
     return { props: { article } }
 }
