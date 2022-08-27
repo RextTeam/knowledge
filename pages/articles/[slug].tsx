@@ -5,7 +5,7 @@ import path from 'path'
 
 
 type Param = {
-    id: string,
+    slug: string,
 }
 
 type StaticProps = {
