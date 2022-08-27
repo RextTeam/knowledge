@@ -5,11 +5,11 @@ export default function Nav() {
     const Items = [
         {
             name: "Website",
-            url: "https://rt.rest.dev"
+            url: "https://rt.rest.dev",
         },
         {
             name: "Docs",
-            url: "https://docs.rt.rext.dev"
+            url: "https://docs.rt.rext.dev",
         }
     ]
     return (
