@@ -11,10 +11,10 @@ interface Article {
 }
 
 interface PropsT {
-    articles: Article;
+    articles: Article[];
 }
 
-const Home: NextPage = ({ articles }) => {
+const Home: NextPage = ({ articles }: PropsT) => {
     return (
         <>
             <p>工事中</p>
