@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   <Component {...pageProps} />
               </main>
               <footer className="py-5">
-                  <small className="text-center content-center">&copy; RextTeam 2022</small>
+                  <small className="justify-center content-center">&copy; RextTeam 2022</small>
               </footer>
           </body>
       </>
