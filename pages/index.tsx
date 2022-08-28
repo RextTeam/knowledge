@@ -22,7 +22,7 @@ export default function Home({ articles }: Props) {
     return (
         <>
             <h2 className="text-4xl">記事一覧</h2>
-            <li className="pt-4">
+            <li className="pt-4 list-none">
                 {articles.map(article => (
                     <ul key={article.url} className="border rounded p-3">
                         <Link href={`/articles/${article.url}`}>
