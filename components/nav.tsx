@@ -5,7 +5,7 @@ export default function Nav() {
     const Items = [
         {
             name: "Website",
-            url: "https://rt.rext.dev",
+            url: "https://rext.dev",
         },
         {
             name: "Docs",
