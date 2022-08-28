@@ -27,7 +27,7 @@ type Props = {
 
 export default function Content({ article }: Props) {
     function CopyUrl() {
-        navigator.clipboard.writeText(`https://knowledge.rext.dev/articles/${article.url}`)
+        navigator.clipboard.writeText(`https://knowledge.rext.dev/articles/${article.slug}`)
     }
     return (
         <div>
