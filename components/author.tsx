@@ -7,7 +7,11 @@ const authors = {
     }
 }
 
-export default function Author(name: string) {
+type Props = {
+    name: string,
+}
+
+export default function Author({ author }: Props) {
     return (
         <div>
             <div className="flex">
