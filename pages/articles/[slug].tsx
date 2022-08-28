@@ -5,7 +5,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
-import { TwitterShareButton, TwitterIcon } = 'react-share'
+import { TwitterShareButton, TwitterIcon } from 'react-share'
 
 
 type Param = {
