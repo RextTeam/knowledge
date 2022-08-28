@@ -5,7 +5,12 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
-import { TwitterShareButton, TwitterIcon } from 'react-share'
+import { 
+    TwitterShareButton,
+    TwitterIcon,
+    FacebookShareButton,
+    FacebookIcon
+} from 'react-share'
 
 
 type Param = {
@@ -42,10 +47,13 @@ export default function Content({ article }: Props) {
                 <MDXRemote {...article.content}/>
             </article>
             <div className="flex justify-end">
-                <button className="border rounded p-2 text-xl mx-2" onClick={() => CopyUrl()}>Copy link</button>
-                <TwitterShareButton url={url} title={article.meta.title} className="mx-2" >
+                <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
+                <FacebookShareButton url={url} quote={article.meta.title} className="mx-2">
+                    <FacebookIcon size={32} round={true} />
+                </FacebookShareButton>
+                <button className="border rounded p-2 text-xl mx-2" onClick={() => CopyUrl()}>Copy link</button>
             </div>
         </div>
     )
