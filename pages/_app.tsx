@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <main className="px-7 pt-10 grow">
                   <Component {...pageProps} />
               </main>
-              <footer className="justify-center>
+              <footer className="justify-center">
                   <small className="py-5 text-center text-xs">&copy; RextTeam 2022</small>
               </footer>
           </body>
