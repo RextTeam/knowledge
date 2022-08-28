@@ -42,8 +42,8 @@ export default function Content({ article }: Props) {
                 <MDXRemote {...article.content}/>
             </article>
             <div className="flex justify-end">
-                <button className="border rounded p-2 text-xl" onClick={() => CopyUrl()}>Copy link</button>
-                <TwitterShareButton url={url} title={article.meta.title}>
+                <button className="border rounded p-2 text-xl mx-2" onClick={() => CopyUrl()}>Copy link</button>
+                <TwitterShareButton url={url} title={article.meta.title} className="mx-2" >
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
             </div>
