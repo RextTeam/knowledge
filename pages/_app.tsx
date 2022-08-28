@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   <Component {...pageProps} />
               </main>
               <footer>
-                  <p>
+                  <p>hello</p>
               </footer>
           </body>
       </>
