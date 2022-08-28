@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { Meta } from '../../interfaces/meta'
+import Author from '../../components/author'
 
 
 type Param = {
@@ -27,6 +28,9 @@ export default function Content({ article }: Props) {
     return (
         <div>
             <h2 className="text-center text-5xl">{article.meta.title}</h2>
+            <div className="flex justify-between">
+                <Author name={article.meta.author} />
+            </div>
             <article className="prose">
                 <MDXRemote {...article.content}/>
             </article>
