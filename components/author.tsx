@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
 
-type Author = {
-    string: {
-        url: string,
-    },
+interface AuthorT {
+    [name: string]: {
+        url: string
+    }
 }
 
-const authors: Author = {
+const authors: AuthorT = {
     mc_fdc: {
         url: "https://mc-fdc.com",
     }
