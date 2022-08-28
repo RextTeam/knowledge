@@ -36,7 +36,10 @@ export default function Content({ article }: Props) {
     const url = `https://knowledge.rext.dev/articles/${article.slug}`
     function CopyUrl() {
         navigator.clipboard.writeText(url)
-        toast("Copied!")
+        toast.success("Copied!", {
+            position: "top-right",
+            autoClose: 5000,
+        })
     }
     return (
         <div>
