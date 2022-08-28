@@ -5,6 +5,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
+import React from 'react'
+import Modal from 'react-modal'
 
 
 type Param = {
@@ -25,6 +27,28 @@ type Props = {
     article: Article,
 }
 
+function ShareModal({article}: Props) {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+    return (
+        <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            contentLabel="Share"
+        >
+            <p>hi</p>
+            <button onClick={closeModal}>close</button>
+        </Modal>
+    )
+}
+
 export default function Content({ article }: Props) {
     function CopyUrl() {
         navigator.clipboard.writeText(`https://knowledge.rext.dev/articles/${article.slug}`)
@@ -41,6 +65,7 @@ export default function Content({ article }: Props) {
             </article>
             <div className="flex justify-end">
                 <button className="border rounded p-2 text-xl" onClick={() => CopyUrl()}>Copy link</button>
+                <ShareModal article=article />
             </div>
         </div>
     )
