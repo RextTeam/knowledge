@@ -55,7 +55,7 @@ export default function Content({ article }: Props) {
                 <FacebookShareButton url={url} quote={article.meta.title} className="mx-2">
                     <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
-                <button className="border rounded p-2 text-xl mx-2" onClick={() => CopyUrl()}>Copy link</button>
+                <button className="border rounded p-2 text-xl mx-2" onClick={CopyUrl}>Copy link</button>
             </div>
         </div>
     )
