@@ -11,7 +11,7 @@ type Props = {
     name: string,
 }
 
-export default function Author({ author }: Props) {
+export default function Author({ name }: Props) {
     return (
         <div>
             <div className="flex">
