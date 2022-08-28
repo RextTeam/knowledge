@@ -5,8 +5,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
-import React from 'react'
-import Modal from 'react-modal'
+import { TwitterShareButton, TwitterIcon } = 'react-share'
 
 
 type Param = {
@@ -27,31 +26,10 @@ type Props = {
     article: Article,
 }
 
-function ShareModal({article}: Props) {
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    function openModal() {
-        setIsOpen(true);
-    }
-
-    function closeModal() {
-        setIsOpen(false);
-    }
-    return (
-        <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            contentLabel="Share"
-        >
-            <p>hi</p>
-            <button onClick={closeModal}>close</button>
-        </Modal>
-    )
-}
-
 export default function Content({ article }: Props) {
+    const url = `https://knowledge.rext.dev/articles/${article.slug}`
     function CopyUrl() {
-        navigator.clipboard.writeText(`https://knowledge.rext.dev/articles/${article.slug}`)
+        navigator.clipboard.writeText(url)
     }
     return (
         <div>
@@ -65,7 +43,9 @@ export default function Content({ article }: Props) {
             </article>
             <div className="flex justify-end">
                 <button className="border rounded p-2 text-xl" onClick={() => CopyUrl()}>Copy link</button>
-                <ShareModal article=article />
+                <TwitterShareButton url={url} title={article.meta.title}>
+                    <TwitterIcon size={32} round={true} />
+                </TwitterShareButton>
             </div>
         </div>
     )
