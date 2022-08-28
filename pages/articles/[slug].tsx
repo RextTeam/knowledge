@@ -5,7 +5,7 @@ import fs from 'fs'
 import path from 'path'
 
 import matter from 'gray-matter'
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Meta } from '../../interfaces/meta'
@@ -43,11 +43,6 @@ export default function Content({ article }: Props) {
         toast.success("Copied!", {
             position: "top-right",
             autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
         })
         navigator.clipboard.writeText(url)
     }
@@ -69,6 +64,7 @@ export default function Content({ article }: Props) {
                     <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
                 <button className="border rounded p-2 text-xl mx-2" onClick={CopyUrl}>Copy link</button>
+                <ToastContainer />
             </div>
         </div>
     )
