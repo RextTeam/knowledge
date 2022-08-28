@@ -28,7 +28,7 @@ export default function Content({ article }: Props) {
     return (
         <div>
             <h2 className="text-center text-5xl">{article.meta.title}</h2>
-            <div className="flex justify-between">
+            <div className="flex justify-between pb-4">
                 <Author name={article.meta.author} />
             </div>
             <article className="prose">
