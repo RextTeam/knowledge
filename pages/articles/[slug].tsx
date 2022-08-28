@@ -18,6 +18,7 @@ type StaticProps = {
 type Article = {
     content: MDXRemoteSerializeResult,
     meta: Meta,
+    slug: string,
 }
 
 type Props = {
@@ -25,6 +26,9 @@ type Props = {
 }
 
 export default function Content({ article }: Props) {
+    function CopyUrl() {
+        navigator.clipboard.writeText(`https://knowledge.rext.dev/articles/${article.url}`)
+    }
     return (
         <div>
             <div className="flex justify-between pb-4">
@@ -35,6 +39,9 @@ export default function Content({ article }: Props) {
             <article className="prose">
                 <MDXRemote {...article.content}/>
             </article>
+            <div className="flex justify-end">
+                <button className="border" onClick={() => CopyUrl()}>共有</button>
+            </div>
         </div>
     )
 }
@@ -59,6 +66,7 @@ export async function getStaticProps({ params }: StaticProps) {
     const article = {
         content: await serialize(content),
         meta: data,
+        slug: `${params.slug}`,
     }
     return { props: { article } }
 }
