@@ -39,7 +39,7 @@ type Props = {
 
 export default function Content({ article }: Props) {
     const url = `https://knowledge.rext.dev/articles/${article.slug}`
-    const CopyUrl() => {
+    const CopyUrl = () => {
         toast.success("Copied!", {
             position: "top-right",
             autoClose: 5000,
