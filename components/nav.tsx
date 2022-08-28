@@ -13,19 +13,23 @@ export default function Nav() {
         }
     ]
     return (
-        <div className="border-b-4">
+        <header className="border-b-4">
             <div className="flex mx-8 justify-between my-2 items-center">
                 <div>
-                    <Link href="/"><a><h1 className="text-4xl">Knowledge</h1></a></Link>
+                    <h1>
+                        <Link href="/">
+                            <a className="text-4xl">Knowledge</a>
+                        </Link>
+                    </h1>
                 </div>
                 <ul className="flex">
                     {Items.map(item => (
                         <li className="mx-4" key={item.name}>
-                            <a className="text-3xl" href={item.url} key={item.name}>{item.name}</a>
+                            <a className="text-3xl" href={item.url}>{item.name}</a>
                         </li>
                     ))}
                 </ul>
             </div>
-        </div>
+        </header>
     )
 }
