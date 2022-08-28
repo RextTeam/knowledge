@@ -3,6 +3,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { toast } from 'react-toastify';
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
 import { 
@@ -35,6 +36,7 @@ export default function Content({ article }: Props) {
     const url = `https://knowledge.rext.dev/articles/${article.slug}`
     function CopyUrl() {
         navigator.clipboard.writeText(url)
+        toast("Copied!")
     }
     return (
         <div>
