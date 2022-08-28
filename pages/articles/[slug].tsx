@@ -40,7 +40,7 @@ export default function Content({ article }: Props) {
                 <MDXRemote {...article.content}/>
             </article>
             <div className="flex justify-end">
-                <button className="border" onClick={() => CopyUrl()}>共有</button>
+                <button className="border rounded p-2" onClick={() => CopyUrl()}>共有</button>
             </div>
         </div>
     )
