@@ -21,7 +21,7 @@ export default function Author({ name }: Props) {
     return (
         <div>
             <div className="flex">
-                <Image src={`/images/author/${name}.webp`} alt={name} width={10} height={10} className="justify-center border rounded-full" />
+                <Image src={`/images/authors/${name}.webp`} alt={name} width={10} height={10} className="justify-center border rounded-full" />
                 <a href={authors[name].url}>
                     <small className="text-xl content-center">{name}</small>
                 </a>
