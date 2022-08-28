@@ -49,7 +49,7 @@ export async function getStaticProps() {
             }
         })
     )
-    articles = [...articles].sort((a, b) => new Date(b) - new Date(a))
+    articles = [...articles].sort((a, b) => new Date(b).getTime() - new Date(a).getTime())
     return {
         props: {
             articles: articles,
