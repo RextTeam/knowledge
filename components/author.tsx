@@ -19,7 +19,7 @@ type Props = {
 
 export default function Author({ name }: Props) {
     return (
-        <div>
+        <div className="pb-2">
             <div className="flex">
                 <Image src={`/images/authors/${name}.webp`} alt={name} width={30} height={30} className="justify-center border rounded-full" />
                 <a href={authors[name].url} className="pl-2">
