@@ -28,7 +28,10 @@ export default function Home({ articles }: Props) {
                         <Link href={`/articles/${article.url}`}>
                             <a className="text-3xl">{article.meta.title}</a>
                         </Link>
-                        <p className="text-xl">{article.meta.description}</p>
+                        <div className='flex justify-between'>
+                            <p className="text-xl">{article.meta.description}</p>
+                            <small className="text-xl">{article.meta.date}</small>
+                        </div>
                     </li>
                 ))}
             </ul>
