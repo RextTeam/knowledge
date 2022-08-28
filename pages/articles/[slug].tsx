@@ -47,7 +47,7 @@ export default function Content({ article }: Props) {
         })
     }
     return (
-        <div>
+        <div className="px-4">
             <div className="flex justify-between pb-4">
                 <Author name={article.meta.author} />
                 <small className="text-xl content-center">{article.meta.date}</small>
