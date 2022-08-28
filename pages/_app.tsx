@@ -7,11 +7,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
           <Head />
-          <body>
+          <body className="flex flex-col min-h-screen">
               <Nav />
-              <main className="px-7 pt-10">
+              <main className="px-7 pt-10 grow">
                   <Component {...pageProps} />
               </main>
+              <footer>
+                  <p>
+              </footer>
           </body>
       </>
   )
