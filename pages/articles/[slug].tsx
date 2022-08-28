@@ -40,11 +40,11 @@ type Props = {
 export default function Content({ article }: Props) {
     const url = `https://knowledge.rext.dev/articles/${article.slug}`
     const CopyUrl = () => {
+        navigator.clipboard.writeText(url)
         toast.success("Copied!", {
             position: "top-right",
             autoClose: 5000,
         })
-        navigator.clipboard.writeText(url)
     }
     return (
         <div>
