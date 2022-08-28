@@ -30,7 +30,7 @@ export default function Content({ article }: Props) {
             <h2 className="text-center text-5xl">{article.meta.title}</h2>
             <div className="flex justify-between pb-4">
                 <Author name={article.meta.author} />
-                <small className-"text-xl content-center">{article.meta.date}</small>
+                <small className="text-xl content-center">{article.meta.date}</small>
             </div>
             <article className="prose">
                 <MDXRemote {...article.content}/>
