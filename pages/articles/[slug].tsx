@@ -1,11 +1,16 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+
 import fs from 'fs'
 import path from 'path'
+
 import matter from 'gray-matter'
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
+
 import { 
     TwitterShareButton,
     TwitterIcon,
