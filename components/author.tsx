@@ -10,6 +10,9 @@ interface AuthorT {
 const authors: AuthorT = {
     mc_fdc: {
         url: "https://mc-fdc.com",
+    },
+    tasuren: {
+        url: "https://tasuren.f5.si",
     }
 }
 
