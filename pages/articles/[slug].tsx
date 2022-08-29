@@ -1,5 +1,6 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import Image from 'next/image'
 
 import fs from 'fs'
 import path from 'path'
@@ -56,14 +57,16 @@ export default function Content({ article }: Props) {
             <article className="prose">
                 <MDXRemote {...article.content}/>
             </article>
-            <div className="flex justify-end pt-6">
+            <div className="flex justify-center md:justify-end pt-6">
                 <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
                 <FacebookShareButton url={url} quote={article.meta.title} className="mx-2">
                     <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
-                <button className="border rounded p-2 text-xl mx-2" onClick={CopyUrl}>Copy link</button>
+                <button className="mx-2" onClick={CopyUrl}>
+                    <Image src="/images/copy.webp" alt="Copy" width={32} height={32} />
+                </button>
                 <ToastContainer />
             </div>
         </div>
