@@ -65,7 +65,9 @@ export default function Nav() {
                 <ul className="hidden md:flex">
                     <NavItems />
                 </ul>
-                <button className="md:hidden" onClick={openModal}>Menu</button>
+                <button className="md:hidden" onClick={openModal}>
+                    <Image src="/images/bar.webp" width={48} height={48} />
+                </button>
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
