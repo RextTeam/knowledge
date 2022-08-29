@@ -9,6 +9,17 @@ type Props = {
     aclassName?: string,
 }
 
+const customStyles = {
+    content : {
+        top: '20%',
+        left: '50%',
+        right: '10%',
+        bottom: '40%',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    }
+}
+
 export function NavItems({ className="mx-4", aclassName="text-3xl" }: Props) {
     const Items = [
         {
@@ -58,7 +69,8 @@ export default function Nav() {
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
-                    contentLabel="Menu">
+                    contentLabel="Menu"
+                    style={customStyles}>
                         <div className="flex">
                             <h2 className="text-3xl">Menu</h2>
                             <button className="ml-auto" onClick={closeModal}>
@@ -67,7 +79,7 @@ export default function Nav() {
                         </div>
                         <ul>
                             <NavItems
-                                className="my-2 border rounded border-violet-600"
+                                className="my-2 border rounded border-violet-600 py-2"
                                 aclassName="text-xl" />
                         </ul>
                 </Modal>
