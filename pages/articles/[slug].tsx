@@ -47,7 +47,7 @@ export default function Content({ article }: Props) {
         })
     }
     return (
-        <div className="px-4">
+        <div className="px-4 md:px-20">
             <div className="flex justify-between pb-4">
                 <Author name={article.meta.author} />
                 <small className="text-xl content-center">{article.meta.date}</small>
@@ -56,7 +56,7 @@ export default function Content({ article }: Props) {
             <article className="prose">
                 <MDXRemote {...article.content}/>
             </article>
-            <div className="flex justify-end">
+            <div className="flex justify-end pt-6">
                 <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>

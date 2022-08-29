@@ -18,7 +18,7 @@ export default function Nav() {
                 <div>
                     <h1>
                         <Link href="/">
-                            <a className="text-4xl">Knowledge</a>
+                            <a className="text-4xl">Rext Knowledge</a>
                         </Link>
                     </h1>
                 </div>
