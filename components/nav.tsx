@@ -11,7 +11,7 @@ type Props = {
 
 const customStyles = {
     content : {
-        top: '20%',
+        top: '21%',
         left: '50%',
         right: '10%',
         bottom: '40%',
