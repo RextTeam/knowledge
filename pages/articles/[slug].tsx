@@ -52,7 +52,7 @@ export default function Content({ article }: Props) {
                 <Author name={article.meta.author} />
                 <small className="text-xl content-center">{article.meta.date}</small>
             </div>
-            <h2 className="text-center text-5xl pb-4">{article.meta.title}</h2>
+            <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
             <article className="prose">
                 <MDXRemote {...article.content}/>
             </article>
