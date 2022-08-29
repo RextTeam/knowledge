@@ -81,7 +81,7 @@ export default function Nav() {
                         </div>
                         <ul>
                             <NavItems
-                                className="my-2 border rounded border-violet-600 py-2"
+                                className="my-2 border rounded border-violet-600 p-2"
                                 aclassName="text-xl" />
                         </ul>
                 </Modal>
