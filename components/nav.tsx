@@ -66,7 +66,7 @@ export default function Nav() {
                     <NavItems />
                 </ul>
                 <button className="md:hidden" onClick={openModal}>
-                    <Image src="/images/bar.webp" width={48} height={48} />
+                    <Image alt="bar" src="/images/bar.webp" width={48} height={48} />
                 </button>
                 <Modal
                     isOpen={modalIsOpen}
