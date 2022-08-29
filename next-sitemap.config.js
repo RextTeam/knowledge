@@ -2,4 +2,4 @@
 module.exports = {
     siteUrl: 'https://knowledge.rext.dev',
     generateRobotsTxt: true,
-  }
+}
