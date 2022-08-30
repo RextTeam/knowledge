@@ -13,7 +13,7 @@ export default function Layout({ children }: Props) {
             <PageHead />
             <div className="flex flex-col min-h-screen">
                 <Nav />
-                <main className="px-7 pt-10 grow bg-violet-400">
+                <main className="px-7 pt-10 grow bg-violet-200">
                     {children}
                 </main>
                 <footer>
