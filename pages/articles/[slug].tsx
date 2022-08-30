@@ -71,6 +71,7 @@ export default function Content({ article }: Props) {
                     <ToastContainer />
                 </div>
             </div>
+            <div className="py-4" />
         </div>
     )
 }
