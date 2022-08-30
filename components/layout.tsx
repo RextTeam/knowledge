@@ -17,7 +17,7 @@ export default function Layout({ children }: Props) {
                     {children}
                 </main>
                 <footer className="bg-gray-800">
-                    <p className="py-5 text-center text-xs">&copy; RextTeam 2022</p>
+                    <p className="py-5 text-center text-xs text-white">&copy; RextTeam 2022</p>
                 </footer>
             </div>
         </>
