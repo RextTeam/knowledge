@@ -54,20 +54,22 @@ export default function Content({ article }: Props) {
                 <small className="text-xl content-center">{article.meta.date}</small>
             </div>
             <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
-            <article className="prose">
-                <MDXRemote {...article.content}/>
-            </article>
-            <div className="flex justify-center md:justify-end pt-6">
-                <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
-                    <TwitterIcon size={32} round={true} />
-                </TwitterShareButton>
-                <FacebookShareButton url={url} quote={article.meta.title} className="mx-2">
-                    <FacebookIcon size={32} round={true} />
-                </FacebookShareButton>
-                <button className="mx-2" onClick={CopyUrl}>
-                    <Image src="/images/copy.webp" alt="Copy" width={32} height={32} />
-                </button>
-                <ToastContainer />
+            <div className="bg-white rounded-md">
+                <article className="prose">
+                    <MDXRemote {...article.content}/>
+                </article>
+                <div className="flex justify-center md:justify-end pt-6">
+                    <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
+                        <TwitterIcon size={32} round={true} />
+                    </TwitterShareButton>
+                    <FacebookShareButton url={url} quote={article.meta.title} className="mx-2">
+                        <FacebookIcon size={32} round={true} />
+                    </FacebookShareButton>
+                    <button className="mx-2" onClick={CopyUrl}>
+                       <Image src="/images/copy.webp" alt="Copy" width={32} height={32} />
+                    </button>
+                    <ToastContainer />
+                </div>
             </div>
         </div>
     )
