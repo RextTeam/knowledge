@@ -14,8 +14,7 @@ export function AdArticle() {
         }
     }, [])
     return (
-        <ins className="adsbygoogle"
-             style="display:block; text-align:center;"
+        <ins className="block text-center adsbygoogle"
              data-ad-layout="in-article"
              data-ad-format="fluid"
              data-ad-client="ca-pub-8715826596324259"
