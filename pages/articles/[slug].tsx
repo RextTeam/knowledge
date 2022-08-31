@@ -62,7 +62,7 @@ export default function Content({ article }: Props) {
                 <article className="prose">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8715826596324259"
                             crossOrigin="anonymous" />
-                    <ins class="adsbygoogle"
+                    <ins className="adsbygoogle"
                          style="display:block; text-align:center;"
                          data-ad-layout="in-article"
                          data-ad-format="fluid"
