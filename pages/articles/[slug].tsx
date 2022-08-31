@@ -1,7 +1,6 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Image from 'next/image'
-import { useEffect } from 'react'
 
 import fs from 'fs'
 import path from 'path'
@@ -12,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
+import { AdArticle } from '../../components/ads'
 
 import { 
     TwitterShareButton,
@@ -48,9 +48,6 @@ export default function Content({ article }: Props) {
             autoClose: 5000,
         })
     }
-    useEffect(() => {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    })
     return (
         <div className="px-3 md:px-8">
             <div className="flex justify-between pb-4">
@@ -60,14 +57,7 @@ export default function Content({ article }: Props) {
             <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
             <div className="bg-white rounded-md py-6 px-4 md:px-8">
                 <article className="prose">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8715826596324259"
-                            crossOrigin="anonymous" />
-                    <ins className="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-8715826596324259"
-                         data-ad-slot="3776860539" />
+                    <AdArticle />
                     <MDXRemote {...article.content}/>
                 </article>
                 <div className="flex justify-center md:justify-end pt-6">
