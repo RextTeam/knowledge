@@ -1,6 +1,7 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 import fs from 'fs'
 import path from 'path'
@@ -45,6 +46,24 @@ export default function Content({ article }: Props) {
         toast.success("Copied!", {
             position: "top-right",
             autoClose: 5000,
+        })
+    }
+    useEffect(() => {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    })
+    return (
+        <div className="px-3 md:px-8">
+            <div className="flex justify-between pb-4">
+                <Author name={article.meta.author} />
+                <small className="text-xl content-center">{article.meta.date}</small>
+            </div>
+            <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
+            <div className="bg-white rounded-md py-6 px-4 md:px-8">
+                <article className="prose">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8715826596324259"
+                            crossOrigin="anonymous" />
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
                          data-ad-layout="in-article"
                          data-ad-format="fluid"
                          data-ad-client="ca-pub-8715826596324259"
