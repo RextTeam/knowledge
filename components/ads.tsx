@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 export function AdArticle() {
     useEffect(() => {
-        if !(typeof window === undefined) {
+        if (typeof window !== undefined) {
             (window.adsbygoogle = window.adsbygoogle || []).push({})
         }
     }, [])
