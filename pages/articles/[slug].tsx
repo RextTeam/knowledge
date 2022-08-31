@@ -45,17 +45,10 @@ export default function Content({ article }: Props) {
         toast.success("Copied!", {
             position: "top-right",
             autoClose: 5000,
-        })
-    }
-    return (
-        <div className="px-3 md:px-8">
-            <div className="flex justify-between pb-4">
-                <Author name={article.meta.author} />
-                <small className="text-xl content-center">{article.meta.date}</small>
-            </div>
-            <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
-            <div className="bg-white rounded-md py-6 px-4 md:px-8">
-                <article className="prose">
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-8715826596324259"
+                         data-ad-slot="3776860539" />
                     <MDXRemote {...article.content}/>
                 </article>
                 <div className="flex justify-center md:justify-end pt-6">
