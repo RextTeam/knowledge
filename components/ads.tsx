@@ -3,12 +3,8 @@ import { useEffect } from 'react'
 
 export function AdArticle() {
     useEffect(() => {
-        try {
-            if !(typeof window === undefined) {
-                (window.adsbygoogle = window.adsbygoogle || []).push({})
-            }
-        } catch (err) {
-            console.log(err)
+        if !(typeof window === undefined) {
+            (window.adsbygoogle = window.adsbygoogle || []).push({})
         }
     }, [])
     return (
