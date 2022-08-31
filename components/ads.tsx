@@ -4,7 +4,9 @@ import { useEffect } from 'react'
 export function AdArticle() {
     useEffect(() => {
         try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({})
+            if !(typeof window === undefined) {
+                (window.adsbygoogle = window.adsbygoogle || []).push({})
+            }
         } catch (err) {
             console.log(err)
         }
