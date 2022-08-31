@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 export function AdArticle() {
     useEffect(() => {
-        (adsbygoogle = window.adsbygoogle || []).push({})
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
     })
     return (
         <ins className="adsbygoogle"
