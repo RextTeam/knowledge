@@ -3,8 +3,12 @@ import { useEffect } from 'react'
 
 export function AdArticle() {
     useEffect(() => {
-        (window.adsbygoogle = window.adsbygoogle || []).push({})
-    })
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({})
+        } catch (err) {
+            console.log(err)
+        }
+    }, [])
     return (
         <ins className="adsbygoogle"
              style="display:block; text-align:center;"
