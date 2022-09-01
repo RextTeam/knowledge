@@ -33,6 +33,7 @@ export default function Home({ articles }: Props) {
                 ))}
             </ul>
             <Ad />
+            <div className="py-4" />
         </>
     )
 }
