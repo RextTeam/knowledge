@@ -37,7 +37,7 @@ export function Ad() {
         }
     }, [])
     return (
-        <ins className="block adsbygoogle"
+        <ins className="block adsbygoogle justify-center"
              data-ad-client="ca-pub-8715826596324259"
              data-ad-slot="9147556969"
              data-ad-format="auto"

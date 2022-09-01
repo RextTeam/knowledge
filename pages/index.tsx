@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import { Meta } from '../interfaces/meta'
+import { Ad } from '../components/ads'
 
 
 type Article = {
@@ -31,6 +32,7 @@ export default function Home({ articles }: Props) {
                     </li>
                 ))}
             </ul>
+            <Ad />
         </>
     )
 }
