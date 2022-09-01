@@ -10,7 +10,11 @@ declare global {
 export function AdArticle() {
     useEffect(() => {
         if (typeof window !== undefined) {
-            (window.adsbygoogle = window.adsbygoogle || []).push({})
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({})
+            } catch (error) {
+                console.error(error)
+            }
         }
     }, [])
     return (
