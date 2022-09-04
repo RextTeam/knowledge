@@ -21,7 +21,7 @@ export default function Layout({ children }: Props) {
                 <footer className="bg-gray-800 text-white">
                     <div className="py-10 flex flex-col-reverse md:flex-row justify-between">
                         <p className="text-xs p-2">&copy; RextTeam 2022</p>
-                        <div className="flex">
+                        <div className="flex flex-col md:flex-row">
                             <Link href="/form">
                                 <a className="p-2">フォーム</a>
                             </Link>
