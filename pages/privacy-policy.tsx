@@ -12,7 +12,7 @@ function Item({ title, children }: Props) {
     return (
         <div className="py-2">
             <h2 className="text-xl">{title}</h2>
-            {children}
+            <div className="py-2">{children}</div>
         </div>
     )
 }
@@ -48,6 +48,9 @@ export default function PrivacyPolicy() {
                     
                     広告サービスはCookieを利用して、ユーザーの興味に応じた広告を表示しております。Cookieを無効にしたい場合は
                     <a href="https://www.google.com/intl/ja/policies/privacy/partners/">こちら</a>をご覧ください。
+                </Item>
+                <Item title="プライバシーポリシーの変更について">
+                    プライバシーポリシーの変更はユーザーに通知することなく変更することができます。
                 </Item>
                 <Item title="お問い合わせ">
                     当サービスに関するお問い合わせは<Link href="/forms">フォーム</Link>または、<a href=mailto:tasuren5@gmail.com>メール</a>にて
