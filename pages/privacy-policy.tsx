@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
+import Link from 'next/link'
+
 
 interface Props {
     title: string;
@@ -41,6 +43,14 @@ export default function PrivacyPolicy() {
                         ただし，個人情報保護法その他の法令で認められる場合を除きます。
                     </p>
                 </Item>
+                <Item title="広告の配信について">
+                    当サービスは広告サービスである「Google Adsense」を利用しています。
+                    
+                    広告サービスはCookieを利用して、ユーザーの興味に応じた広告を表示しております。Cookieを無効にしたい場合は
+                    <a href="https://www.google.com/intl/ja/policies/privacy/partners/">こちら</a>をご覧ください。
+                </Item>
+                <Item title="お問い合わせ">
+                    当サービスに関するお問い合わせは<Link href="/forms">
             </div>
         </div>
     )
