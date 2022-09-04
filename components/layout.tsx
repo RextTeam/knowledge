@@ -19,14 +19,14 @@ export default function Layout({ children }: Props) {
                     {children}
                 </main>
                 <footer className="bg-gray-800 text-white">
-                    <div className="py-10 flex justify-between">
-                        <p className="text-xs">&copy; RextTeam 2022</p>
+                    <div className="py-10 flex flex-col-reverse md:flex-row justify-between">
+                        <p className="text-xs p-2">&copy; RextTeam 2022</p>
                         <div className="flex">
                             <Link href="/form">
-                                <a className="px-2">フォーム</a>
+                                <a className="p-2">フォーム</a>
                             </Link>
                             <Link href="/privacy-policy">
-                                <a className="px-2">プライバシーポリシー</a>
+                                <a className="p-2">プライバシーポリシー</a>
                             </Link>
                         </div>
                     </div>
