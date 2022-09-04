@@ -50,7 +50,9 @@ export default function PrivacyPolicy() {
                     <a href="https://www.google.com/intl/ja/policies/privacy/partners/">こちら</a>をご覧ください。
                 </Item>
                 <Item title="お問い合わせ">
-                    当サービスに関するお問い合わせは<Link href="/forms">
+                    当サービスに関するお問い合わせは<Link href="/forms">フォーム</Link>または、<a href=mailto:tasuren5@gmail.com>メール</a>にて
+                    お願いします。
+                </Item>
             </div>
         </div>
     )
