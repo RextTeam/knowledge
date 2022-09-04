@@ -2,7 +2,7 @@ import PageHead from './head';
 import Nav from './nav'
 import { ReactNode } from 'react'
 
-import Link from 'next/link"
+import Link from 'next/link'
 
 
 interface Props {
