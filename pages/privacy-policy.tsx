@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
                     プライバシーポリシーの変更はユーザーに通知することなく変更することができます。
                 </Item>
                 <Item title="お問い合わせ">
-                    当サービスに関するお問い合わせは<Link href="/forms">フォーム</Link>または、<a href=mailto:tasuren5@gmail.com>メール</a>にて
+                    当サービスに関するお問い合わせは<Link href="/forms"><a>フォーム</a></Link>または、<a href=mailto:tasuren5@gmail.com>メール</a>にて
                     お願いします。
                 </Item>
             </div>
