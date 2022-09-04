@@ -2,6 +2,8 @@ import PageHead from './head';
 import Nav from './nav'
 import { ReactNode } from 'react'
 
+import Link from 'next/link"
+
 
 interface Props {
     children: ReactNode;
@@ -16,8 +18,14 @@ export default function Layout({ children }: Props) {
                 <main className="px-7 pt-10 grow bg-violet-200">
                     {children}
                 </main>
-                <footer className="bg-gray-800">
-                    <p className="py-10 text-center text-xs text-white">&copy; RextTeam 2022</p>
+                <footer className="bg-gray-800 text-white">
+                    <div className="py-10 justify-between">
+                        <p className="text-xs">&copy; RextTeam 2022</p>
+                        <div>
+                            <Link href="/form" className="px-1">フォーム</Link>
+                            <Link href="/privacy-policy" className="px-1">プライバシーポリシー</Link>
+                        </div>
+                    </div>
                 </footer>
             </div>
         </>
