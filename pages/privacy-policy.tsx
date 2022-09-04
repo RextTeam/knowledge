@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
                     当サービスに関するお問い合わせは
                     <Link href="/form">
                         <a className="text-indigo-800">フォーム</a>
-                    </Link>または、<a href="mailto:tasuren5@gmail.com" className="text-cyan-200">メール</a>にてお願いします。
+                    </Link>または、<a href="mailto:tasuren5@gmail.com" className="text-indigo-800">メール</a>にてお願いします。
                 </Item>
             </div>
         </div>
