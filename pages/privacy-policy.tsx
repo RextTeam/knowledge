@@ -12,7 +12,7 @@ function Item({ title, children }: Props) {
     return (
         <div className="py-2">
             <h2 className="text-xl">{title}</h2>
-            <div className="py-2">{children}</div>
+            <p className="py-2">{children}</p>
         </div>
     )
 }
