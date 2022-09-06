@@ -11,7 +11,7 @@ interface Props {
 function Item({ title, children }: Props) {
     return (
         <div className="py-2">
-            <h2 className="text-2xl">{title}</h2>
+            <h2 className="text-2xl font-semibold">{title}</h2>
             <p className="py-2">{children}</p>
         </div>
     )
