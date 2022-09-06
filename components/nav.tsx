@@ -25,10 +25,6 @@ export function NavItems({ className="mx-4", aclassName="text-3xl" }: Props) {
         {
             name: "Website",
             url: "https://rext.dev",
-        },
-        {
-            name: "Docs",
-            url: "https://docs.rt.rext.dev",
         }
     ]
     return (
