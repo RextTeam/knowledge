@@ -1,4 +1,4 @@
-import PageHead from './head';
+import PageHead from './head'
 import Nav from './nav'
 import { ReactNode } from 'react'
 
