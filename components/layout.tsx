@@ -19,7 +19,7 @@ export default function Layout({ children }: Props) {
                     {children}
                 </main>
                 <footer className="bg-gray-800 text-white">
-                    <div className="py-10 flex flex-col-reverse md:flex-row justify-between">
+                    <div className="py-10 px-4 flex flex-col-reverse md:flex-row justify-between">
                         <p className="text-xs p-2">&copy; RextTeam 2022</p>
                         <div className="flex flex-col md:flex-row">
                             <Link href="/form">
