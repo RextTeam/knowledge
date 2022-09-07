@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
                     当サービスは広告サービスである「Google Adsense」を利用しています。
                     
                     広告サービスはCookieを利用して、ユーザーの興味に応じた広告を表示しております。Cookieを無効にしたい場合は
-                    <a href="https://www.google.com/intl/ja/policies/privacy/partners/">こちら</a>をご覧ください。
+                    <a href="https://www.google.com/intl/ja/policies/privacy/partners/" className="text-indigo-800">こちら</a>をご覧ください。
                 </Item>
                 <Item title="プライバシーポリシーの変更について">
                     プライバシーポリシーの変更はユーザーに通知することなく変更することができます。
