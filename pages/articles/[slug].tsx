@@ -80,10 +80,10 @@ export default function Content({ article }: Props) {
 
 export async function getStaticPaths() {
     let files = fs.readdirSync(path.join("articles"))
-    files = files.filter((file) => file.split(".")[1] === "mdx");
+    files = files.filter((file) => file.split(".")[1] === "md");
     const paths = files.map(file => {
         return {
-            params: { slug: file.replace(".mdx", "") }
+            params: { slug: file.replace(".md", "") }
         }
     })
     return {
