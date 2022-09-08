@@ -93,7 +93,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: StaticProps) {
-    const filedata = fs.readFileSync(path.join("articles/", `${params.slug}.mdx`))
+    const filedata = fs.readFileSync(path.join("articles/", `${params.slug}.md`))
     const { data, content } = matter(filedata)
     const article = {
         content: markdownHtml(content),
