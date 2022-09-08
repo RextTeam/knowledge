@@ -5,7 +5,9 @@ import initTwitterScriptInner from 'zenn-embed-elements/lib/init-twitter-script-
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-    useEffect(() => import("zenn-embed-elements"),[])
+    useEffect(() => {
+        import("zenn-embed-elements")
+    }, [])
     return (
         <Layout>
             <script
