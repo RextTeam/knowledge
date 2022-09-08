@@ -3409,6 +3409,16 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
+zenn-content-css@^0.1.122:
+  version "0.1.122"
+  resolved "https://registry.yarnpkg.com/zenn-content-css/-/zenn-content-css-0.1.122.tgz#6a0f025fc4845db1ff61b15d5030ac26254a78f2"
+  integrity sha512-oAQ+h6/554XTqL4QCvbFX5smgWNnq0FEsRsnIymvEd2cSB9XNYByiV2zR5jFIvxl9oe2Dn8YSD4zf3vsUb7Wvw==
+
+zenn-embed-elements@^0.1.122:
+  version "0.1.122"
+  resolved "https://registry.yarnpkg.com/zenn-embed-elements/-/zenn-embed-elements-0.1.122.tgz#b7a4508080ab1fbaef0fc4b446234f426e2d692c"
+  integrity sha512-fvePPQ1Jo+VWrtq9F+MSJ+I8XIa/82YVoEOlALE29khA4vkcry9RPDXu/G259wiDUkg1QzbpSIOHWqhW5s/dfA==
+
 zenn-markdown-html@^0.1.122:
   version "0.1.122"
   resolved "https://registry.yarnpkg.com/zenn-markdown-html/-/zenn-markdown-html-0.1.122.tgz#79bc2a0c297130ca053660797e61af2a42ae6845"
