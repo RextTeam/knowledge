@@ -57,7 +57,7 @@ export default function Content({ article }: Props) {
             <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
             <div className="bg-white rounded-md py-6 px-4 md:px-8">
                 <article className="prose">
-                    <div dangerouslySetInnerHTML={{ _html: article.content }}
+                    <div dangerouslySetInnerHTML={{ _html: article.content }} />
                     <AdArticle />
                 </article>
                 <div className="flex justify-center md:justify-end pt-6">
