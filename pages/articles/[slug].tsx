@@ -1,5 +1,5 @@
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import markdownHtml from 'zenn-markdown-html'
+import 'zenn-content-css'
 import Image from 'next/image'
 
 import fs from 'fs'
@@ -30,7 +30,7 @@ type StaticProps = {
 }
 
 type Article = {
-    content: MDXRemoteSerializeResult,
+    content: string,
     meta: Meta,
     slug: string,
 }
@@ -57,8 +57,8 @@ export default function Content({ article }: Props) {
             <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
             <div className="bg-white rounded-md py-6 px-4 md:px-8">
                 <article className="prose">
+                    <div dangerouslySetInnerHTML={{ _html: article.content }}
                     <AdArticle />
-                    <MDXRemote {...article.content}/>
                 </article>
                 <div className="flex justify-center md:justify-end pt-6">
                     <TwitterShareButton url={url} title={article.meta.title} className="mx-2">
@@ -96,7 +96,7 @@ export async function getStaticProps({ params }: StaticProps) {
     const filedata = fs.readFileSync(path.join("articles/", `${params.slug}.mdx`))
     const { data, content } = matter(filedata)
     const article = {
-        content: await serialize(content),
+        content: markdownHtml(content),
         meta: data,
         slug: `${params.slug}`,
     }
