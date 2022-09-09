@@ -8,7 +8,7 @@ interface Props {
 
 function Content({ title, children }: Props) {
     return (
-        <div>
+        <div className="px-2">
             <label>{ title }</label>
             <br />
             {children}
