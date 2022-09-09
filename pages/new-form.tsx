@@ -1,6 +1,6 @@
 export default function NewForm() {
     return (
-        <>
+        <div className="px-4">
             <h2 className="text-2xl">お問い合わせフォーム</h2>
             <form method="post" action="https://hyperform.jp/api/kzhZu7sN">
                 <div>
@@ -17,6 +17,6 @@ export default function NewForm() {
                 </div>
                 <button type="submit">送信</button>
             </form>
-        </>
+        </div>
     )
 }
