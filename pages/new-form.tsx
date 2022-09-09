@@ -22,16 +22,16 @@ export default function NewForm() {
             <h2 className="text-2xl">お問い合わせフォーム</h2>
             <form method="post" action="https://hyperform.jp/api/kzhZu7sN">
                 <Content title="メールアドレス">
-                    <input className="p-5 border-b-2 outline-none" type="email" name="email" required />
+                    <input className="p-5 border-b-2 rounded-none outline-none" type="email" name="email" required />
                 </Content>
                 <Content title="お名前">
-                    <input className="p-5 border-b-2 outline-none" type="text" name="お名前" required />
+                    <input className="p-5 border-b-2 rounded-none outline-none" type="text" name="お名前" required />
                 </Content>
                 <Content title="件名">
-                    <input className="p-5 border-b-2 outline-none" type="text" name="件名" required />
+                    <input className="p-5 border-b-2 rounded-none outline-none" type="text" name="件名" required />
                 </Content>
                 <Content title="お問い合わせ内容">
-                    <textarea className="p-10 border-b-2 outline-none" name="お問い合わせ内容" required />
+                    <textarea className="p-10 border-b-2 rounded-none outline-none" name="お問い合わせ内容" required />
                 </Content>
                 <button type="submit" className="rounded bg-violet-700 p-2 text-white">送信</button>
             </form>
