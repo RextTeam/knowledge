@@ -26,7 +26,7 @@ export default function NewForm() {
                 <Content title="お名前">
                     <input type="text" name="お名前" required />
                 </Content>
-                <Content title="お問い合わせ内容"
+                <Content title="お問い合わせ内容">
                     <textarea name="お問い合わせ内容" required />
                 </Content>
                 <button type="submit">送信</button>
