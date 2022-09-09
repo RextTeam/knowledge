@@ -14,6 +14,7 @@ export default function NewForm() {
                 <div>
                     <label>お問い合わせ内容</label>
                     <textarea name="お問い合わせ内容" required />
+                </div>
             </form>
         </>
     )
