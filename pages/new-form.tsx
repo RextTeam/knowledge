@@ -5,7 +5,11 @@ export default function NewForm() {
             <form method="post" action="https://hyperform.jp/api/kzhZu7sN">
                 <div>
                     <label>メールアドレス</label>
-                    <input type="email" name="Email" required />
+                    <input type="email" name="email" required />
+                </div>
+                <div>
+                    <label>お名前</label>
+                    <input type="text" name="お名前" required />
                 </div>
             </form>
         </>
