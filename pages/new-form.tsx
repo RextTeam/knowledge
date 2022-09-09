@@ -10,6 +10,7 @@ function Content({ title, children }: Props) {
     return (
         <div>
             <label>{ title }</label>
+            <br />
             {children}
         </div>
     )
