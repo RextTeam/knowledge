@@ -18,8 +18,8 @@ function Content({ title, children }: Props) {
 
 export default function NewForm() {
     return (
-        <div className="px-5 bg-white rounded">
-            <h2 className="pt-4 text-2xl">お問い合わせフォーム</h2>
+        <div className="px-5 bg-white rounded my-2">
+            <h2 className="text-2xl">お問い合わせフォーム</h2>
             <form method="post" action="https://hyperform.jp/api/kzhZu7sN">
                 <Content title="メールアドレス">
                     <input className="p-5 outline-none" type="email" name="email" required />
