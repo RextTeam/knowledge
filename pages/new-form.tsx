@@ -11,6 +11,9 @@ export default function NewForm() {
                     <label>お名前</label>
                     <input type="text" name="お名前" required />
                 </div>
+                <div>
+                    <label>お問い合わせ内容</label>
+                    <textarea name="お問い合わせ内容" required />
             </form>
         </>
     )
