@@ -1,5 +1,5 @@
 ---
-title: Zennマークダウンに変えてみた。
+title: Zennマークダウンに変えてみた
 description: mdxからZennマークダウンに変えてみた。
 author: mc_fdc
 date: 2022/9/8
