@@ -33,7 +33,7 @@ export default function NewForm() {
                 <Content title="お問い合わせ内容">
                     <textarea className="p-10" name="お問い合わせ内容" required />
                 </Content>
-                <button type="submit" className="rounded bg-violet-700 p-2">送信</button>
+                <button type="submit" className="rounded bg-violet-700 p-2 text-white">送信</button>
             </form>
         </div>
     )
