@@ -23,7 +23,7 @@ mc_fdc#7133に許可を貰ってから投稿してください。
 
 ## metadataの書き方
 
-```
+```md
 ---
 title: タイトル
 description: 説明
