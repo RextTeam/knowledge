@@ -6,8 +6,8 @@ import fs from 'fs'
 import path from 'path'
 
 import matter from 'gray-matter'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import { Meta } from '../../interfaces/meta'
 import Author from '../../components/author'
