@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, ChangeEvent } from 'react'
 
 
 interface Props {
@@ -31,9 +31,12 @@ export default function NewForm() {
                     <input className="w-64 border-b-2 rounded-none outline-none" type="text" name="件名" required />
                 </Content>
                 <Content title="お問い合わせ内容">
-                    <textarea className="w-64 border-b-2 rounded-none outline-none" name="お問い合わせ内容" required />
+                    <textarea
+                        className="w-64 border-b-2 rounded-none outline-none"
+                        name="お問い合わせ内容"
+                        required />
                 </Content>
-                <button type="submit" className="rounded bg-violet-700 p-2 text-white">送信</button>
+                <button type="submit" className="rounded bg-violet-700 px-4 py-2 text-white">送信</button>
             </form>
         </div>
     )
