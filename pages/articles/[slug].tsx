@@ -1,6 +1,8 @@
 import markdownHtml from 'zenn-markdown-html'
+import { JSDOM } from 'jsdom'
 import 'zenn-content-css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import fs from 'fs'
 import path from 'path'
@@ -20,7 +22,6 @@ import {
     FacebookIcon
 } from 'react-share'
 
-
 type Param = {
     slug: string,
 }
@@ -29,10 +30,15 @@ type StaticProps = {
     params: Param,
 }
 
+type Table = {
+    content: string | null,
+}
+
 type Article = {
     content: string,
     meta: Meta,
     slug: string,
+    tables: Table[],
 }
 
 type Props = {
@@ -74,9 +80,15 @@ export default function Content({ article }: Props) {
                         <ToastContainer />
                     </div>
                 </div>
-                <aside className='w-1/4 p-2 bg-white m-2 rounded max-h-96'>
-                    <h3 className='text-2xl font-semibold'>記事一覧</h3>
-                    <ol className='list-decimal list-inside'></ol>
+                <aside className='w-1/4 p-4 bg-white m-2 rounded max-h-96'>
+                    <h3 className='text-2xl font-semibold pb-2'>目次</h3>
+                    <ol className='list-decimal list-inside'>
+                        {article.tables.map(table => (
+                            <li className='text-lg' key={table.content}>
+                                <Link href={`${url}#${table.content}`}>{table.content}</Link>
+                            </li>
+                        ))}
+                    </ol>
                 </aside>
             </div>
             <div className="py-4" />
@@ -101,10 +113,19 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: StaticProps) {
     const filedata = fs.readFileSync(path.join("articles/", `${params.slug}.md`))
     const { data, content } = matter(filedata)
+    const html = markdownHtml(content)
+    const { window: { document } } = new JSDOM(html)
+    const tables: Table[] = []
+    document.querySelectorAll("h2").forEach((htag) => {
+        tables.push({
+            content: htag.textContent
+        })
+    })
     const article = {
-        content: markdownHtml(content),
+        content: html,
         meta: data,
         slug: `${params.slug}`,
+        tables: tables,
     }
     return { props: { article } }
 }
