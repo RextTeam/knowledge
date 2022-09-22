@@ -62,7 +62,7 @@ export default function Content({ article }: Props) {
             </div>
             <h2 className="text-center text-4xl md:text-5xl pb-4">{article.meta.title}</h2>
             <div className='flex'>
-                <div className="w-3/4 bg-white rounded-md py-6 px-4 md:px-8">
+                <div className="md:w-3/4 bg-white rounded-md py-6 px-4 md:px-8">
                     <article>
                         <div className="znc prose md:prose-lg prose-pre:p-0 md:prose-pre:p-0" dangerouslySetInnerHTML={{ __html: article.content }} />
                         <AdArticle />
@@ -80,7 +80,7 @@ export default function Content({ article }: Props) {
                         <ToastContainer />
                     </div>
                 </div>
-                <aside className='w-1/4 p-4 bg-white m-2 rounded max-h-96 invisible md:visible'>
+                <aside className='md:w-1/4 p-4 bg-white m-2 rounded max-h-96 invisible md:visible'>
                     <h3 className='text-2xl font-semibold pb-2'>目次</h3>
                     <ol className='list-decimal list-inside'>
                         {article.tables.map(table => (
