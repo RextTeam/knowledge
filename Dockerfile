@@ -2,8 +2,8 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
-RUN sudo apt-get update
-RUN sudo apt-get -y upgrade
+RUN apt-get update
+RUN apt-get -y upgrade
 
 COPY package.json ./
 COPY yarn.lock ./
