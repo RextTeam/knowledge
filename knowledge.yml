@@ -31,5 +31,6 @@ spec:
       containers:
       - name: knowledge-container
         image: knowledge
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
