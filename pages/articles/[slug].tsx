@@ -80,7 +80,7 @@ export default function Content({ article }: Props) {
                         <ToastContainer />
                     </div>
                 </div>
-                <aside className='w-1/4 p-4 bg-white m-2 rounded max-h-96'>
+                <aside className='w-1/4 p-4 bg-white m-2 rounded max-h-96 invisible md:visible'>
                     <h3 className='text-2xl font-semibold pb-2'>目次</h3>
                     <ol className='list-decimal list-inside'>
                         {article.tables.map(table => (
