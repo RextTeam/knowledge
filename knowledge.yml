@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: knowledge-deployment
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: knowledge
